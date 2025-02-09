@@ -57,7 +57,7 @@ function Preloading({ setLoading }) {
 					setCounter(endValue)
 
 					gsap.to('.counter p', {
-						y: `-5rem`,
+						y: `-4rem`,
 						duration: 1,
 						ease: 'power3.in',
 						delay: 0.4,
@@ -72,17 +72,16 @@ function Preloading({ setLoading }) {
 			y: 0,
 			duration: 1,
 			ease: 'power3.out',
-			delay: 1,
+			delay: 0.8,
 			onComplete: animateCounter
 		})
 	}, [])
-
-	useCallback(() => {})
 
 	function curveAndHide() {
 		setIsShowCurve(true)
 		setTimeout(() => {
 			setLoading(false)
+			window.scrollTo(0, 0)
 		}, 100)
 	}
 
@@ -98,7 +97,7 @@ function Preloading({ setLoading }) {
 				style={counterStyle}
 			>
 				<p
-					className={`font-republica text-[3rem] text-white relative block translate-y-[5rem]`}
+					className={`font-cosi-times text-[2rem] text-white relative block translate-y-[4rem]`}
 				>
 					{counter}
 				</p>

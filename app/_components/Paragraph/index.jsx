@@ -15,7 +15,7 @@ function Paragraph({ paragraph }) {
 	return (
 		<div
 			ref={container}
-			className='flex content-baseline leading-none p-10 max-w-screen-xl text-black flex-wrap gap-y-[.5vw] gap-x-[.2vw]'
+			className='flex content-baseline leading-none p-10 text-black flex-wrap gap-y-[.5vw] gap-x-[.2vw] w-[80vw] px-[5vw]'
 		>
 			{words.map((word, i) => {
 				const start = i / words.length

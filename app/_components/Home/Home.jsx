@@ -37,6 +37,7 @@ function HomePage() {
 				{
 					y: '0vh',
 					fontSize: '2vw',
+					backdropFilter: 'blur(1rem)',
 					yPercent: 0
 				}
 			),
@@ -52,7 +53,8 @@ function HomePage() {
 		}
 	}, [])
 
-	const shortDes = `I'm DaoPVT - a Web Developer who loves creating beautiful and user-friendly websites. My goal is to turn creative ideas into meaningful online experiences.`
+	const shortDes = `I'm Dao Phan - a Web Developer who loves creating beautiful and user-friendly websites. My goal is to turn creative ideas into meaningful online experiences.`
+	const longDes = `I am passionate about takes pride in creating beautiful, functional, and user-friendly websites. I enjoy bringing creative ideas to life and strive to deliver meaningful online experiences that resonate with users.`
 	return (
 		<div className='home-page'>
 			<div className='logo-container'>
@@ -61,11 +63,11 @@ function HomePage() {
 				</h1>
 			</div>
 			<div className='w-full h-[100vh] bg-background relative'>
-				<div className='w-[3vw] absolute bottom-0 left-[50vw] -translate-y-1/2 -translate-x-[50%] '>
+				{/* <div className='w-[3vw] absolute bottom-0 left-[50vw] -translate-y-1/2 -translate-x-[50%] '>
 					<MouseScroll />
-				</div>
+				</div> */}
 			</div>
-			<div className='content w-full   h-[100vh] relative'>
+			<div className='content w-full h-[100vh] relative'>
 				<Paragraph paragraph={shortDes} />
 			</div>
 		</div>

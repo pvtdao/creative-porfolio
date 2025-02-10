@@ -3,6 +3,9 @@ import { ScrollTrigger } from 'gsap/all'
 import React, { useEffect } from 'react'
 import MouseScroll from '../icon/MouseScroll'
 import Paragraph from '../Paragraph'
+import Hero from '../Hero'
+import Image from 'next/image'
+import ME from '@/app/images/4.jpg'
 
 function HomePage() {
 	useEffect(() => {
@@ -37,7 +40,7 @@ function HomePage() {
 				{
 					y: '0vh',
 					fontSize: '2vw',
-					backdropFilter: 'blur(1rem)',
+					// backdropFilter: 'blur(1rem)',
 					yPercent: 0
 				}
 			),
@@ -53,7 +56,6 @@ function HomePage() {
 		}
 	}, [])
 
-	const shortDes = `I'm Dao Phan - a Web Developer who loves creating beautiful and user-friendly websites. My goal is to turn creative ideas into meaningful online experiences.`
 	const longDes = `I am passionate about takes pride in creating beautiful, functional, and user-friendly websites. I enjoy bringing creative ideas to life and strive to deliver meaningful online experiences that resonate with users.`
 	return (
 		<div className='home-page'>
@@ -61,15 +63,17 @@ function HomePage() {
 				<h1 className='w-full text-center font-cosi-times invisible font-[900] p-[1em] text-[10vw] z-[90] logo fixed top-0 left-1/2 -translate-x-1/2 uppercase'>
 					DAOPVT
 				</h1>
+				<div className='relative h-[100vh]'>
+					<Image style={{ objectFit: 'cover' }} src={ME} alt='image' fill />
+				</div>
 			</div>
 			<div className='w-full h-[100vh] bg-background relative'>
 				{/* <div className='w-[3vw] absolute bottom-0 left-[50vw] -translate-y-1/2 -translate-x-[50%] '>
 					<MouseScroll />
 				</div> */}
 			</div>
-			<div className='content w-full h-[100vh] relative'>
-				<Paragraph paragraph={shortDes} />
-			</div>
+			<div className='content w-full relative'></div>
+			<Hero />
 		</div>
 	)
 }

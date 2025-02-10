@@ -63,17 +63,18 @@ function HomePage() {
 				<h1 className='w-full text-center font-cosi-times invisible font-[900] p-[1em] text-[10vw] z-[90] logo fixed top-0 left-1/2 -translate-x-1/2 uppercase'>
 					DAOPVT
 				</h1>
-				<div className='relative h-[100vh]'>
-					<Image style={{ objectFit: 'cover' }} src={ME} alt='image' fill />
-				</div>
 			</div>
 			<div className='w-full h-[100vh] bg-background relative'>
 				{/* <div className='w-[3vw] absolute bottom-0 left-[50vw] -translate-y-1/2 -translate-x-[50%] '>
 					<MouseScroll />
 				</div> */}
 			</div>
-			<div className='content w-full relative'></div>
-			<Hero />
+			<div className='content w-full h-[100vh] relative'>
+				<div className='relative h-[100vh]'>
+					<Image style={{ objectFit: 'cover' }} src={ME} alt='image' fill />
+					<Hero />
+				</div>
+			</div>
 		</div>
 	)
 }

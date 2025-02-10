@@ -12,7 +12,7 @@ function Hero() {
 	})
 
 	return (
-		<main className='overflow-hidden'>
+		<section className='overflow-hidden flex items-center'>
 			<div ref={container}>
 				<Slide
 					src={Picture1}
@@ -22,7 +22,7 @@ function Hero() {
 				/>
 			</div>
 			<div className='h-[100vh]' />
-		</main>
+		</section>
 	)
 }
 

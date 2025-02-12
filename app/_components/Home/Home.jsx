@@ -1,11 +1,7 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import React, { useEffect } from 'react'
-import MouseScroll from '../icon/MouseScroll'
-import Paragraph from '../Paragraph'
-import Hero from '../Hero'
-import Image from 'next/image'
-import ME from '@/app/images/4.jpg'
+import { useEffect } from 'react'
+import ShortIntroduction from '../ShortIntroduce'
 
 function HomePage() {
 	useEffect(() => {
@@ -40,14 +36,23 @@ function HomePage() {
 				{
 					y: '0vh',
 					fontSize: '2vw',
-					// backdropFilter: 'blur(1rem)',
 					yPercent: 0
 				}
 			),
 			scrub: true,
 			trigger: '.content',
 			start: 'top bottom',
-			end: 'top center'
+			end: 'top center',
+			onUpdate: (self) => {
+				const logo = document.querySelector('.logo')
+				if (!logo) return
+
+				if (self.progress === 1) {
+					logo.classList.add('glass-effect')
+				} else {
+					logo.classList.remove('glass-effect')
+				}
+			}
 		})
 
 		return () => {
@@ -70,11 +75,9 @@ function HomePage() {
 				</div> */}
 			</div>
 			<div className='content w-full h-[100vh] relative'>
-				<div className='relative h-[100vh]'>
-					<Image style={{ objectFit: 'cover' }} src={ME} alt='image' fill />
-					<Hero />
-				</div>
+				<ShortIntroduction />
 			</div>
+			<div className='h-[100vh]'></div>
 		</div>
 	)
 }

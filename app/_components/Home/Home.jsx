@@ -2,6 +2,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react'
 import ShortIntroduction from '../ShortIntroduce'
+import AboutMe from '../AboutMe'
 
 function HomePage() {
 	useEffect(() => {
@@ -61,7 +62,6 @@ function HomePage() {
 		}
 	}, [])
 
-	const longDes = `I am passionate about takes pride in creating beautiful, functional, and user-friendly websites. I enjoy bringing creative ideas to life and strive to deliver meaningful online experiences that resonate with users.`
 	return (
 		<div className='home-page'>
 			<div className='logo-container'>
@@ -69,15 +69,17 @@ function HomePage() {
 					DAOPVT
 				</h1>
 			</div>
-			<div className='w-full h-[100vh] bg-background relative'>
+			<div className='w-full h-screen bg-background relative'>
 				{/* <div className='w-[3vw] absolute bottom-0 left-[50vw] -translate-y-1/2 -translate-x-[50%] '>
 					<MouseScroll />
 				</div> */}
 			</div>
-			<div className='content w-full h-[100vh] relative'>
+			<div className='content w-full h-screen relative'>
 				<ShortIntroduction />
 			</div>
-			<div className='h-[100vh]'></div>
+			<div className='h-screen'>
+				<AboutMe />
+			</div>
 		</div>
 	)
 }

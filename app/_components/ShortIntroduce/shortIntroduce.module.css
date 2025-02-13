@@ -1,9 +1,9 @@
 .slider {
-    @apply relative whitespace-nowrap w-fit mix-blend-soft-light;
+    @apply relative whitespace-nowrap w-fit mix-blend-difference;
 }
 
 .slider p {
-    @apply text-black mt-0 font-bold text-[18vw] mix-blend-overlay relative whitespace-nowrap pr-[3vw] font-iskry;
+    @apply text-white mt-0 font-bold text-[18vw] relative whitespace-nowrap pr-[3vw] font-iskry;
 }
 
 .slider p:nth-of-type(2) {
@@ -16,4 +16,16 @@
     position: absolute;
     left: 200%;
     top: 0;
+}
+
+.description {
+    @apply absolute top-[25%] left-[65%] text-white text-2xl font-light mix-blend-difference;
+}
+
+.description p {
+    @apply m-0 text-[2vw] leading-normal;
+}
+
+.description svg {
+    @apply w-[2vw] h-[2vw] mb-[100px] text-[2vw];
 }

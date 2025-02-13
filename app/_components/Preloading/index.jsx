@@ -90,7 +90,7 @@ function Preloading({ setLoading }) {
 			variants={slideUp}
 			initial='initial'
 			exit='exit'
-			className='h-[100vh] w-[100vw] flex items-center justify-center fixed z-[99] bg-foreground text-white'
+			className='h-screen w-[100vw] flex items-center justify-center fixed z-[99] bg-foreground text-white'
 		>
 			<div
 				className='counter absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  text-center'

@@ -17,7 +17,12 @@ module.exports = {
 			fontFamily: {
 				republica: ['var(--font-republica-minor)', 'serif'],
 				iskry: ['var(--font-iskry)', 'serif'],
-				'cosi-times': ['var(--font-cosi-times)', 'serif']
+				'cosi-times': ['var(--font-cosi-times)', 'serif'],
+				'mj-brave-paridos': ['var(--font-mj-brave-paridos)', 'serif'],
+				amerigraf: ['var(--font-amerigraf)', 'serif'],
+				gilmore: ['var(--font-gilmore)', 'serif'],
+				avgard: ['var(--font-avgard)', 'serif'],
+				'essendine-caps': ['var(--font-essendine-caps)', 'serif']
 			}
 		}
 	},

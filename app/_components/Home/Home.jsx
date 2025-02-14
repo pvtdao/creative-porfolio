@@ -6,13 +6,22 @@ import AboutMe from '../AboutMe'
 
 function HomePage() {
 	useEffect(() => {
-		gsap.registerPlugin(ScrollTrigger)
+		initializeGSAP()
+		return cleanupGSAP
+	}, [])
 
+	const initializeGSAP = () => {
+		gsap.registerPlugin(ScrollTrigger)
+		const tl = setupInitialAnimation()
+		setupScrollAnimation()
+		return tl
+	}
+
+	const setupInitialAnimation = () => {
 		const tl = gsap.timeline()
 
 		tl.fromTo(
 			'.logo',
-			1,
 			{
 				y: '100vh',
 				visibility: 'hidden',
@@ -26,6 +35,14 @@ function HomePage() {
 			}
 		)
 
+		return tl
+	}
+
+	const cleanupGSAP = () => {
+		ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+	}
+
+	const setupScrollAnimation = () => {
 		ScrollTrigger.create({
 			animation: gsap.fromTo(
 				'.logo',
@@ -44,23 +61,20 @@ function HomePage() {
 			trigger: '.content',
 			start: 'top bottom',
 			end: 'top center',
-			onUpdate: (self) => {
-				const logo = document.querySelector('.logo')
-				if (!logo) return
-
-				if (self.progress === 1) {
-					logo.classList.add('glass-effect')
-				} else {
-					logo.classList.remove('glass-effect')
-				}
-			}
+			onUpdate: handleScrollUpdate
 		})
+	}
 
-		return () => {
-			tl.kill()
-			ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
+	const handleScrollUpdate = (self) => {
+		const logo = document.querySelector('.logo')
+		if (!logo) return
+
+		if (self.progress === 1) {
+			logo.classList.add('glass-effect')
+		} else {
+			logo.classList.remove('glass-effect')
 		}
-	}, [])
+	}
 
 	return (
 		<div className='home-page'>
@@ -77,9 +91,10 @@ function HomePage() {
 			<div className='content w-full h-screen relative'>
 				<ShortIntroduction />
 			</div>
-			<div className='h-screen'>
+			<div className=''>
 				<AboutMe />
 			</div>
+			<div className='h-screen'></div>
 		</div>
 	)
 }

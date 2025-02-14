@@ -3,7 +3,7 @@
 }
 
 .slider p {
-    @apply text-white mt-0 font-bold text-[18vw] relative whitespace-nowrap pr-[3vw] font-iskry;
+    @apply text-white mt-0 font-bold text-[16vw] relative whitespace-nowrap pr-[3vw] font-iskry leading-normal;
 }
 
 .slider p:nth-of-type(2) {
@@ -19,11 +19,11 @@
 }
 
 .description {
-    @apply absolute top-[25%] left-[65%] text-white text-2xl font-light mix-blend-difference;
+    @apply absolute top-[20%] left-[65%] text-white text-2xl font-light mix-blend-difference;
 }
 
 .description p {
-    @apply m-0 text-[2vw] leading-normal;
+    @apply m-0 text-[1.5vw] leading-normal font-essendine-caps;
 }
 
 .description svg {

@@ -1,5 +1,14 @@
 import './globals.css'
-import { Iskry, RepublicaMinor, CosiTimes } from './utils/font'
+import {
+	Iskry,
+	RepublicaMinor,
+	CosiTimes,
+	BraveParidos,
+	Amerigraf,
+	Gilmore,
+	Avgard,
+	EssendineCaps
+} from './utils/font'
 
 export const metadata = {
 	title: 'DaoPVT • Web Developer',
@@ -11,7 +20,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang='en'>
 			<body
-				className={`${RepublicaMinor.variable} ${Iskry.variable} ${CosiTimes.variable} antialiased`}
+				className={`${RepublicaMinor.variable} ${Iskry.variable} ${CosiTimes.variable} ${BraveParidos.variable} ${Amerigraf.variable} ${Gilmore.variable} ${Avgard.variable} ${EssendineCaps.variable} antialiased`}
 			>
 				{children}
 			</body>

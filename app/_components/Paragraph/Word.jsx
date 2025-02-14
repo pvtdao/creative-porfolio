@@ -4,9 +4,12 @@ import React from 'react'
 function Word({ children, progress, range }) {
 	const opacity = useTransform(progress, range, [0, 1])
 	return (
-		<p className='relative mr-5 mt-3 font-cosi-times font-bold text-[3vw] flex'>
-			<span className='absolute opacity-[20%]'>{children}</span>
-			<motion.span style={{ opacity, userSelect: 'none' }}>
+		<p className='relative mr-5 mt-3 font-essendine-caps text-[3vw] flex '>
+			<span className='absolute opacity-[20%] font-normal'>{children}</span>
+			<motion.span
+				style={{ opacity, userSelect: 'none' }}
+				className='font-normal'
+			>
 				{children}
 			</motion.span>
 		</p>

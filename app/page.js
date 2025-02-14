@@ -8,11 +8,14 @@ export default function Home() {
 	const [loading, setLoading] = useState(true)
 
 	useEffect(() => {
-		;(async () => {
-			const LocomotiveScroll = (await import('locomotive-scroll')).default
-			const locomotiveScroll = new LocomotiveScroll()
-		})()
-	}, [])
+		if (!loading) {
+			;(async () => {
+				const LocomotiveScroll = (await import('locomotive-scroll')).default
+				const locomotiveScroll = new LocomotiveScroll()
+			})()
+		}
+	}, [loading])
+
 	return (
 		<main>
 			<AnimatePresence mode='wait'>

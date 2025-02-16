@@ -3,10 +3,13 @@ import { ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react'
 import ShortIntroduction from '../ShortIntroduce'
 import AboutMe from '../AboutMe'
+import Skill from '../Skills/Skill'
 
 function HomePage() {
 	useEffect(() => {
-		initializeGSAP()
+		setTimeout(() => {
+			initializeGSAP()
+		}, 500)
 		return cleanupGSAP
 	}, [])
 
@@ -60,8 +63,8 @@ function HomePage() {
 			scrub: true,
 			trigger: '.content',
 			start: 'top bottom',
-			end: 'top center',
-			onUpdate: handleScrollUpdate
+			end: 'top center'
+			// onUpdate: handleScrollUpdate
 		})
 	}
 
@@ -91,10 +94,14 @@ function HomePage() {
 			<div className='content w-full h-screen relative'>
 				<ShortIntroduction />
 			</div>
-			<div className=''>
+			<div className='h-screen'>
 				<AboutMe />
 			</div>
-			<div className='h-screen'></div>
+
+			<Skill />
+			<section className='experience h-screen w-screen overflow-hidden'>
+				Your section experience
+			</section>
 		</div>
 	)
 }

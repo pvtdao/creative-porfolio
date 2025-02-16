@@ -40,14 +40,14 @@ export default function RoundedButton({
 	return (
 		<Magnetic>
 			<div
-				className='rounded-[3em] border border-gray-500 cursor-pointer relative flex items-center justify-center py-[15px] px-[60px]'
+				className='rounded-[3em] border border-gray-500  relative flex items-center justify-center py-[15px] px-[60px]'
 				style={{ overflow: 'hidden' }}
-				onMouseEnter={() => {
-					manageMouseEnter()
-				}}
-				onMouseLeave={() => {
-					manageMouseLeave()
-				}}
+				// onMouseEnter={() => {
+				// 	manageMouseEnter()
+				// }}
+				// onMouseLeave={() => {
+				// 	manageMouseLeave()
+				// }}
 				{...attributes}
 			>
 				<p className='relative z-10 transition-colors duration-400 hover:text-white m-0 text-[1.3vw] font-medium font-iskry'>

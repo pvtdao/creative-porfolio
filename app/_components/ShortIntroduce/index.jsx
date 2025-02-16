@@ -46,7 +46,7 @@ function ShortIntroduction() {
 	return (
 		<div className='relative h-screen overflow-hidden bg-black/80'>
 			<Image
-				style={{ objectFit: 'contain', zIndex: 0 }}
+				style={{ objectFit: 'contain', zIndex: 0, scale: 1.5 }}
 				src={ME}
 				alt='image'
 				fill

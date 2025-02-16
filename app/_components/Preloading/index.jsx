@@ -97,7 +97,7 @@ function Preloading({ setLoading }) {
 				style={counterStyle}
 			>
 				<p
-					className={`font-cosi-times text-[2rem] text-white relative block translate-y-[4rem]`}
+					className={`font-cosi-times text-[2vw] text-white relative block translate-y-[4rem]`}
 				>
 					{counter}
 				</p>

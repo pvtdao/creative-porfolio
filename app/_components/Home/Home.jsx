@@ -94,9 +94,7 @@ function HomePage() {
 			<div className='content w-full h-screen relative'>
 				<ShortIntroduction />
 			</div>
-			<div className='h-screen'>
-				<AboutMe />
-			</div>
+			<AboutMe />
 
 			<Skill />
 			<section className='experience h-screen w-screen overflow-hidden'>

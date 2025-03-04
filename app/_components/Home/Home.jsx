@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import ShortIntroduction from '../ShortIntroduce'
 import AboutMe from '../AboutMe'
 import Skill from '../Skills/Skill'
+import Project from '../Project'
 
 function HomePage() {
 	useEffect(() => {
@@ -97,6 +98,7 @@ function HomePage() {
 			<AboutMe />
 
 			<Skill />
+			<Project />
 			<section className='experience h-screen w-screen overflow-hidden'>
 				Your section experience
 			</section>
